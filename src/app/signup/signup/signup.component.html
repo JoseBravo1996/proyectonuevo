@@ -1,0 +1,36 @@
+<div class="signup-page">
+    <div class="content px20">
+      <form class="signup-form" #myForm="ngForm" method="post">
+        <div class="text-center">
+          <h2 class="app-name">ARDCON</h2>
+        </div>
+        <div fxLayout="row">
+          <div fxFlexFill>
+            <mat-form-field class="w-100">
+              <input matInput placeholder="Nombre" [(ngModel)]="usuario.nombre" name="nombre" >
+            </mat-form-field>
+            <mat-form-field class="w-100">
+                <input matInput placeholder="Apellido" [(ngModel)]="usuario.apellido" name="apellido" >
+              </mat-form-field>
+              <mat-form-field class="w-100">
+                <input matInput placeholder="Username" [(ngModel)]="usuario.username" name="username" >
+              </mat-form-field>
+              <mat-form-field class="w-100">
+                <input matInput placeholder="Email" [(ngModel)]="usuario.email" name="email" >
+              </mat-form-field>
+            <mat-form-field class="w-100">
+              <input matInput type="password" placeholder="Contraseña" [(ngModel)]="usuario.password" name="password" >
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row">
+          <div fxFlexFill>
+            <button (click)='create()' type="submit" mat-raised-button color="primary" class="w-100">Continuar</button>
+            <button type="button" mat-button color="primary" class="w-100" (click)="onSignUp()">Volver</button>
+          </div>
+        </div>
+  
+      </form>
+    </div>
+  </div>
+  

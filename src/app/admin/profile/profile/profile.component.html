@@ -1,0 +1,55 @@
+<mat-card-content class="pt-0 mat-card-content">
+  <mat-card class="profile-sidebar mb-1 pb-0 mat-card">
+    <div class="propic text-center"><img alt="" style="width:150px; height:150px;"
+        src="https://material.angular.io/assets/img/examples/shiba2.jpg"></div>
+    <div class="profile-title text-center mb-1">
+      <h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{authService.usuario.nombre}} {{authService.usuario.apellido}}</font></font></h2>
+    </div>
+    <div class="profile-actions mb-1" fxlayoutalign="center center"
+      style="place-content: center; align-items: center; flex-direction: row; box-sizing: border-box; display: flex;">
+      <button color="primary" (click)="openDialog()" type="file" mat-raised-button="" class="mat-raised-button mat-primary"><span
+          class="mat-button-wrapper">Cambiar</span>
+        <div class="mat-button-ripple mat-ripple" matripple=""></div>
+        <div class="mat-button-focus-overlay"></div>
+      </button></div>
+  </mat-card>
+  <mat-card class="default mat-card">
+    <mat-card-title class="mat-card-title">Información de contacto</mat-card-title>
+    <mat-card-content class="pt-0 mat-card-content">
+      <mat-list class="mat-list mat-list-base">
+        <mat-list-item class="mat-list-item">
+          <div class="mat-list-item-content">
+            <div class="mat-list-item-ripple mat-ripple" mat-ripple=""></div>
+            <div class="mat-list-text"></div>
+            <mat-icon class="mr-1 mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">
+              public</mat-icon>&nbsp;{{authService.usuario.web}}
+          </div>
+        </mat-list-item>
+        <mat-list-item class="mat-list-item">
+          <div class="mat-list-item-content">
+            <div class="mat-list-item-ripple mat-ripple" mat-ripple=""></div>
+            <div class="mat-list-text"></div>
+            <mat-icon class="mr-1 mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">
+              email </mat-icon>&nbsp;{{authService.usuario.email}}
+          </div>
+        </mat-list-item>
+        <mat-list-item class="mat-list-item">
+          <div class="mat-list-item-content">
+            <div class="mat-list-item-ripple mat-ripple" mat-ripple=""></div>
+            <div class="mat-list-text"></div>
+            <mat-icon class="mr-1 mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">
+              phone</mat-icon>&nbsp;{{authService.usuario.telefono}}
+          </div>
+        </mat-list-item>
+        <mat-list-item class="mat-list-item">
+          <div class="mat-list-item-content">
+            <div class="mat-list-item-ripple mat-ripple" mat-ripple=""></div>
+            <div class="mat-list-text"></div>
+            <mat-icon class="mr-1 mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">
+              add_location</mat-icon>&nbsp; {{authService.usuario.domicilio}}
+          </div>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</mat-card-content>

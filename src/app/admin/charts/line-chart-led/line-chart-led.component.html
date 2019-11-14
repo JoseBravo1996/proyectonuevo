@@ -1,0 +1,20 @@
+<form [formGroup]="formGroup"  ngNativeValidate>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            Grafico Led 
+        </mat-card-title>
+        <section class="example-section">
+            <mat-slide-toggle class="example-margin" [color]="warning" [checked]="checked" [disabled]="disabled" formControlName="acceptTerms" [(ngModel)]="checked" (change)="changed()">
+                Deslízame!
+            </mat-slide-toggle>
+        </section>
+    </mat-card-header>
+    <mat-card-content>
+        <canvas baseChart width="500" height="200" [datasets]="lineChartData" [labels]="lineChartLabels"
+            [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
+            [chartType]="lineChartType" (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+    </mat-card-content>
+</mat-card>
+</form>

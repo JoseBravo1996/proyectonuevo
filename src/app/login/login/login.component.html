@@ -1,0 +1,30 @@
+<div class="login-page">
+  <div class="content px20">
+    <form class="login-form" #myForm="ngForm" method="post">
+      <div class="text-center">
+        <h2 class="app-name">ARDCON</h2>
+      </div>
+      <div fxLayout="row">
+        <div fxFlexFill>
+          <mat-form-field class="w-100">
+            <input matInput [(ngModel)]="usuario.username" name="user" placeholder="Username">
+          </mat-form-field>
+          <mat-form-field class="w-100">
+            <input matInput [(ngModel)]="usuario.password" name="pass" type="password" placeholder="Contraseña">
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-between" fxLayout.xs="column" class="mt20 mb20">
+        <mat-checkbox color="primary" [ngStyle.xs]="{'margin-bottom.px': 10}">Recuerdame</mat-checkbox>
+        <a href="javascript:void(0)">Olvidé mi contraseña</a>
+      </div>
+      <div fxLayout="row">
+        <div fxFlexFill>
+          <button (click)='login()' type="submit" mat-raised-button color="primary" class="w-100">Continuar</button>
+          <button type="button" mat-button color="primary" class="w-100" (click)="onSignUp()">Crear Cuenta</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
